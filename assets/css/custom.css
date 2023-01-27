@@ -232,3 +232,29 @@ opacity: 1;
   padding: 10px 0;
   height: 150px;
 }
+
+/* Modal container */
+.e-modal {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100vw; /* Full width */
+  height: 99.9vh; /* Full height */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 110; /* Sit on top */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal content box */
+.e-modal-content {
+  position: relative;
+  background-color: #fefefe; /* White background */
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Width of the box */
+  height:80%;
+}

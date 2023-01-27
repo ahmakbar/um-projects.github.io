@@ -59,8 +59,14 @@
     <!--====== PRELOADER ENDS START ======-->
 
     <!--====== HEADER PART START ======-->
-
     <header id="home" class="header-area">
+        <div id="myModal" class="e-modal">
+            <span class="close">&times;</span>
+            <div class="e-modal-content" style="transform: translateX(-50%, -50%);"  style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <img style="width: 500px; height: 200px; margin-left: 500px;" id="img01">
+                <div id="caption"></div>
+            </div>
+          </div>
         <div class="navigation fixed-top">
             <div class="container">
                 <div class="row">
@@ -150,39 +156,40 @@
                                 </div>
                                 <hr>
                                 <div style="height: 350px; display: flex; flex-direction: column;overflow-y: scroll;">
+                                    <div style="display: flex; width: 100%; margin: 0 0 20px 0; cursor: pointer;" class="openModal" data-img="assets/images/car1.jpg" data-text="SIDANG PLENO XVII">
+                                        <img src="assets/images/blog/b-1.jpg" style="width: 100px; height: 100px;" alt="">
+                                        <div id="caption-1" style="margin-left: 40px ;width: 50%;display: flex; flex-direction: column; justify-content: space-between;">
+                                            <p>SIDANG PLENO XVII</p>
+                                            <p>Wednesday, 00:00:00</p>
+                                            <p>Malang</p>
+                                        </div>
+                                        <p style="width: 25%; text-align: end;">icon</p>
+                                        
+                                    </div>
                                     <div style="display: flex; width: 100%; margin: 0 0 20px 0;">
                                         <img src="assets/images/blog/b-1.jpg" style="width: 100px; height: 100px;" alt="">
                                         <div style="margin-left: 40px ;width: 50%;display: flex; flex-direction: column; justify-content: space-between;">
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
+                                            <p>KONGRES VII UNHAS</p>
+                                            <p>Tuesday, 09:15 AM</p>
+                                            <p>Makassar</p>
                                         </div>
                                         <p style="width: 25%; text-align: end;">icon</p>
                                     </div>
                                     <div style="display: flex; width: 100%; margin: 0 0 20px 0;">
                                         <img src="assets/images/blog/b-1.jpg" style="width: 100px; height: 100px;" alt="">
                                         <div style="margin-left: 40px ;width: 50%;display: flex; flex-direction: column; justify-content: space-between;">
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
+                                            <p>SIDANG PLENO XVI</p>
+                                            <p>Wednesday, 12:00 AM</p>
+                                            <p>Bangka Belitung</p>
                                         </div>
                                         <p style="width: 25%; text-align: end;">icon</p>
                                     </div>
                                     <div style="display: flex; width: 100%; margin: 0 0 20px 0;">
                                         <img src="assets/images/blog/b-1.jpg" style="width: 100px; height: 100px;" alt="">
                                         <div style="margin-left: 40px ;width: 50%;display: flex; flex-direction: column; justify-content: space-between;">
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
-                                        </div>
-                                        <p style="width: 25%; text-align: end;">icon</p>
-                                    </div>
-                                    <div style="display: flex; width: 100%; margin: 0 0 20px 0;">
-                                        <img src="assets/images/blog/b-1.jpg" style="width: 100px; height: 100px;" alt="">
-                                        <div style="margin-left: 40px ;width: 50%;display: flex; flex-direction: column; justify-content: space-between;">
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
-                                            <p>aaaa</p>
+                                            <p>AFEBI UNIVERSITY VISIT</p>
+                                            <p>Monday, 06:30 PM</p>
+                                            <p>Tangerang</p>
                                         </div>
                                         <p style="width: 25%; text-align: end;">icon</p>
                                     </div>
@@ -202,6 +209,7 @@
                 </div>
                 
             </div> <!-- container -->
+            
             <div class="header-social">
                 <div class="container">
                     <div class="row">
@@ -365,6 +373,33 @@
     <script src="assets/js/main.js"></script>
 
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        var openModalButtons = document.getElementsByClassName("openModal");
+        for (var i = 0; i < openModalButtons.length; i++) {
+        openModalButtons[i].addEventListener("click", function() {
+            var modal = document.getElementById("myModal");
+            var img = document.getElementById("img01");
+            var caption = document.getElementById("caption");
+            img.src = this.getAttribute("data-img");
+            caption.innerHTML = this.getAttribute("data-text");
+            modal.style.display = "block";
+        });
+        }
+
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    </script>
 
 </body>
 
