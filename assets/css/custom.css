@@ -1,0 +1,234 @@
+* {
+  /* overflow-x: hidden; */
+  
+}
+
+.slider {
+    max-width: 800px;
+  }
+  .slider__images {
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    list-style-type: none;
+    transition: opacity 0.4s ease-in, visibility 0.4s ease-in;
+    overflow-y: hidden;
+  }
+  .slider__images.loaded {
+    opacity: 1;
+    visibility: visible;
+  }
+  .slider__images-item {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .no-js .slider__images-item:first-of-type {
+    position: relative;
+  }
+  .no-js .slider__images-item:not(:first-of-type) {
+    display: none !important;
+  }
+  .slider__images-image {
+    display: block;
+  }
+  .slider__controls {
+    margin-top: 30px;
+    user-select: none;
+    text-align: center;
+  }
+  .slider__control {
+    display: inline-block;
+    color: #829995;
+    cursor: pointer;
+  }
+  .slider__control--prev {
+    /* margin-right: 10px; */
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    transition: .2s;
+}
+.slider__control--next {
+    /* margin-left: 10px; */
+    position: absolute;
+    top: 45%;
+    right: 25%;
+    transition: .2s;
+}
+.slider__pagers {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.slider__control--next:hover, .slider__control--prev:hover, ol :hover {
+    transform: scale(1.05);
+    font-weight: 600;
+}
+.slider__pagers li {
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #829995;
+    padding: 0 10px;
+    transition: .2s;
+  }
+  .slider__pagers li.active {
+    color: #333;
+    font-size: 18px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .wrapper-slider {
+    padding: 30px;
+    
+  }
+
+  .slider {
+    margin: 30px auto 0;
+    padding: 30px;
+    background: transparent;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+  }
+
+  /* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row-pengurus {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row-pengurus,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row-pengurus:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+
+.slider {
+  width: 100%;
+  margin: 50px auto;
+}
+
+
+.slick-slide {
+margin: 0px 20px;
+}
+
+.slick-slide img {
+width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+color: black;
+}
+
+
+.slick-slide {
+transition: all ease-in-out .3s;
+opacity: .2;
+}
+
+.slick-active {
+opacity: .5;
+}
+
+.slick-current {
+opacity: 1;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 200; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  transition: .5s;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
